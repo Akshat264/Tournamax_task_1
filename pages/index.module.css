@@ -1,0 +1,135 @@
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f3f1f8;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+.title {
+    text-align: center;
+    color: #2c155a; 
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+.itemForm {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.itemForm input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #6822eb;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.itemForm input:focus {
+    border-color: #5807ee; 
+    box-shadow: 0 0 5px rgba(255, 69, 0, 0.5);
+}
+
+.itemForm button {
+    background-color: #6822eb;
+    color: white;
+    font-size: 0.9rem;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 15vw;
+    margin-left: 33%;
+    min-width: 100px;
+    height: 7vh;
+    transition: background-color 0.3s;
+}
+@media (max-width: 768px){
+    .itemForm button{
+        margin-left: 40%;
+    }
+}
+.itemForm button:hover {
+    background-color: #5807ee;
+}
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.2);
+}
+.itemText {
+    flex-grow: 1;
+    max-width: 70%;
+    text-align: justify;
+}
+@media (max-width: 425px){
+    .item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4vh;
+    }
+    .itemText{
+        max-width: 100%;
+    }
+    .itemForm input{
+        width: 90%;
+    }
+    .title{
+        font-size: 8vw;
+    }
+    .itemForm button{
+        margin-left: 30%;
+    }
+}
+.item button {
+    background-color: #ff6347;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    margin-left: 1vw;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.item button:hover {
+    background-color: #ff4500;
+}
+.item-enter {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.item-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 500ms, transform 500ms;
+}
+.item-exit {
+    opacity: 1;
+    transform: scale(1);
+}
+.item-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 500ms, transform 500ms;
+}
